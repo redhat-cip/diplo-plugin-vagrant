@@ -10,7 +10,12 @@ function bootstrap() {
 		BOX=`vagrant box list | awk -F' ' '{print $1}' | grep "^$title$" | wc -l`
 		if [ $BOX -eq 0 ]
 		then
-			vagrant box add --name $title $url
+			if [ "`vagrant -v | awk -F' ' '{print $2}' | awk -F'.' '{print $1"."$2}'`" == "1.5" ]
+			then
+				vagrant box add --name $title $url
+			else
+				vagrant box add $title $url
+			fi
 		else
 			echo "Vagrant Box $title already present"
 		fi
