@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function vagrant_help() {
+	echo ""
+	echo "------- Vagrant Help -------"
+	echo "  boostrap <workspace>             Ensure your workspace have all stuff"
+	echo "  deploy <workspace>" 
+		
+}
+
+function boostrap() {
+	cd $@
+}
