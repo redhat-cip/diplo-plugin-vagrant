@@ -7,7 +7,3 @@ function vagrant_help() {
 	echo "  deploy <workspace>" 
 		
 }
-
-function boostrap() {
-	cd $@
-}

@@ -27,6 +27,6 @@ function up() {
 	source vagrant.cfg
 	for i in $ORDER
 	do
-		vagrant up $i
+		vagrant up $i --provider=$PROVIDER
 	done
 }
