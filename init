@@ -3,7 +3,8 @@
 function vagrant_help() {
 	echo ""
 	echo "------- Vagrant Help -------"
+	echo "  status                           Verify if your vagrant is ready to work"
 	echo "  boostrap <workspace>             Ensure your workspace have all stuff"
-	echo "  deploy <workspace>" 
+	echo "  deploy <workspace>               Launch instances as setup in your workspaces"
 		
 }
